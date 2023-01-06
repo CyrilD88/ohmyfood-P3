@@ -1,7 +1,9 @@
-body{
-    background-color: green;
-}
+@import "./base/base.scss";
+@import "./layout/header";
+@import "./layout/city";
+@import "./layout/reservation";
+@import "./composants/functioning";
+@import "./layout/menus";
+@import "./layout/footer";
 
-h1{
-    font-size: 20px;
-}
+

@@ -1,0 +1,23 @@
+.footer{
+    background:  #2c2c2c;
+    color: white;
+    padding: 30px;
+    & a{
+        text-decoration: none;
+        color: white;
+    }
+    &__title{
+        font-family: 'Shrikhand', cursive;
+        font-weight: 500;
+        margin: 0;
+    }
+    &__list{
+        list-style-type: none;
+        padding: 0;
+        & i{
+            margin-right: 20px;
+            width: 10px;
+            height: 10px;
+        }
+    }
+}
