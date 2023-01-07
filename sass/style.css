@@ -128,14 +128,13 @@ header a:hover {
   padding: 2rem 1rem;
   width: auto;
 }
-.menus .menus__cards {
+.menus__cards {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
 }
-
 .menus__card {
   background-color: #fff;
   width: 30rem;
@@ -144,12 +143,10 @@ header a:hover {
   position: relative;
   box-shadow: 2px 1px 16px -3px #000;
 }
-
 .menus__card a {
   text-decoration: none;
   color: black;
 }
-
 .menus__card img {
   width: 100%;
   height: 15rem;
@@ -157,25 +154,7 @@ header a:hover {
      object-fit: cover;
   border-radius: 1rem 1rem 0 0;
 }
-
-.card__infos {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  position: relative;
-}
-
-.card__infos h4 {
-  margin: 0px;
-  padding-left: 10px;
-}
-
-.card__infos p {
-  margin: 0;
-  padding-left: 10px;
-}
-
-.card__image span {
+.menus .card__text {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -186,13 +165,39 @@ header a:hover {
   color: #0c6b50;
   background: #99E2D0;
 }
-
-.card__infos i {
+.menus .card__infos {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+}
+.menus .card__infos h4 {
+  margin: 0px;
+  padding-left: 10px;
+}
+.menus .card__infos p {
+  margin: 0;
+  padding-left: 10px;
+}
+.menus .card__infos i {
   font-size: 1.5rem;
   position: absolute;
   right: 1rem;
   top: 50%;
   transform: translateY(-50%);
+}
+.menus .card__infos .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.menus .card__infos:hover .fa-solid {
+  opacity: 1;
+}
+.menus .card__infos:current .fa-solid {
+  opacity: 1;
 }
 
 .footer {
@@ -278,7 +283,7 @@ header a:hover {
     border-bottom-color: #FF79DA;
   }
   75% {
-    border-top-color: dashed #9356DC;
+    border-top-color: #9356DC;
     border-bottom-color: #9356DC;
   }
   100% {
@@ -303,7 +308,7 @@ header a:hover {
     border-bottom-color: #FF79DA;
   }
   75% {
-    border-top-color: dashed #9356DC;
+    border-top-color: #9356DC;
     border-bottom-color: #9356DC;
   }
   100% {
