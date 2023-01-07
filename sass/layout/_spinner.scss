@@ -1,0 +1,65 @@
+/*Création logo chargement*/
+.loading__spinner{
+    position: fixed;
+    background-color: #fff;
+    height: 100vh;
+    inset: 0px; /*pour ne pas que la page descente avec le scroll mettre position:fixed et rajouter inset*/
+    z-index: 1; /*pour le faire passer devant ma page*/
+    opacity: 0.9;/*pour le rendre plus transparent*/
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    animation: disappear 3s;
+    animation-fill-mode: forwards;
+    
+
+    &__box {
+    background-color: #000;
+    border: 10px solid transparent;
+    height: 10rem;
+    width: 10rem;
+    border-top: 10px solid #9356DC;
+    border-bottom: 10px solid #FF79DA;
+    border-radius:50%;
+    animation: chargeur 3s linear infinite;
+    
+  
+    }
+    &__text{
+    color:#99E2D0;
+    font-size: 1.2rem;
+    font-weight:bold;
+    position:fixed; 
+    }
+@keyframes disappear{
+    to{
+        transform: scale(0);
+    }
+}
+@keyframes chargeur{
+  0%{
+    transform: rotate(0deg) scale(1);
+    border-top-color:#9356DC;
+    border-bottom-color:#FF79DA;
+  }
+   25%{
+     border-top-color:#FF79DA;
+     border-bottom-color:#9356DC;
+  }
+   50%{
+     transform: rotate(360deg) scale(1.50);
+     border-top-color:#9356DC;
+     border-bottom-color:#FF79DA;
+  }
+  75%{
+    border-top-color:dashed #9356DC;
+    border-bottom-color:#9356DC;    
+  }
+  100%{
+     transform: rotate(720deg) scale(1);
+     border-top-color:#9356DC;
+     border-bottom-color:#FF79DA;
+  }
+}
+
+}
