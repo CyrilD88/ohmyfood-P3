@@ -316,4 +316,37 @@ header a:hover {
     border-top-color: #9356DC;
     border-bottom-color: #FF79DA;
   }
+}
+
+.image__header {
+  max-width: 100%;
+}
+
+.menu__palette {
+  border: 1px solid black;
+  position: relative;
+}
+.menu__palette h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.5rem;
+}
+.menu__palette i {
+  font-size: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.menu__palette .fa-solid {
+  color: transparent;
+  background-image: linear-gradient(#ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+}
+.menu__palette:hover .fa-solid {
+  opacity: 1;
+}
+.menu__palette:current .fa-solid {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
