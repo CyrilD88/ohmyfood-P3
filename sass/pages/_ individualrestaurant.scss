@@ -1,10 +1,41 @@
-.image__header{
-    max-width: 100%;
+header{
+    padding: 0;
 }
 
+#menu_premier_restaurant{
+    position: relative;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+    background-color: #f6f6f6;
+    .fas{
+        font-size: 1.5rem;
+    }
+}
+
+.banner{
+    
+    &__image{
+        width: 100%;
+        height:50vh;
+        object-fit: cover;
+        object-position: center;
+    }
+}
+
+
 .menu{
+    background-color: #f6f6f6;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: -125px;
+    padding-top: 1.5rem;
+    
     &__palette{
-        border: 1px solid black;
         position:relative;
         h2 {
             font-family: 'Shrikhand', cursive;
@@ -13,7 +44,7 @@
         & i{
             font-size: 1.5rem;
             position: absolute;
-            right: 1rem;
+            right: 5rem;
             top: 50%;
             transform: translateY(-50%);
         }
@@ -29,6 +60,13 @@
         }
         &:current .fa-solid{
             opacity: 1;
+        }
+       
+    }
+    &__starter{
+        h3{
+            text-decoration: underline #99E2D0
+            ;
         }
     }
 }
