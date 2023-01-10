@@ -318,70 +318,58 @@ header a:hover {
   }
 }
 
-header {
-  padding: 0;
-}
-
-#menu_premier_restaurant {
-  position: relative;
-}
-
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-  background-color: #f6f6f6;
-}
-.header .fas {
-  font-size: 1.5rem;
-}
-
-.banner__image {
+.introduction__image img {
+  display: block;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 
-.menu {
-  background-color: #f6f6f6;
-  border-top-left-radius: 30px;
-  border-top-right-radius: 30px;
-  margin-top: -125px;
-  padding-top: 1.5rem;
+.restaurant__main {
+  margin-top: -3rem;
+  z-index: 1;
+  position: relative;
+  border-radius: 2rem 2rem 0 0;
 }
-.menu__palette {
+.restaurant__main h2 {
+  font-family: "Shrikhand", cursive;
+  padding: 2rem 1rem;
+  margin: 0;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.banner {
+  background: #f6f6f6;
   position: relative;
 }
-.menu__palette h2 {
-  font-family: "Shrikhand", cursive;
-  font-size: 1.5rem;
-}
-.menu__palette i {
+.banner i {
   font-size: 1.5rem;
   position: absolute;
-  right: 5rem;
+  right: 1rem;
   top: 50%;
   transform: translateY(-50%);
 }
-.menu__palette .fa-solid {
+.banner .fa-solid {
   color: transparent;
   background-image: linear-gradient(#ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
 }
-.menu__palette:hover .fa-solid {
+.banner:hover .fa-solid {
   opacity: 1;
 }
-.menu__palette:current .fa-solid {
+.banner:current .fa-solid {
   opacity: 1;
 }
-.menu__starter h3 {
-  -webkit-text-decoration: underline #99E2D0;
-          text-decoration: underline #99E2D0;
+
+.grid {
+  padding: 0 1rem;
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.grid > * {
+  border: 1px solid black;
 }/*# sourceMappingURL=style.css.map */
