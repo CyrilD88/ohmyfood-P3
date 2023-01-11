@@ -367,9 +367,33 @@ header a:hover {
 .grid {
   padding: 0 1rem;
   gap: 1rem;
+  background: yellow;
   display: grid;
   grid-template-columns: 1fr;
 }
-.grid > * {
+.grid__menu {
   border: 1px solid black;
+  background-color: white;
+}
+.grid__items {
+  display: flex;
+  /*création du bouton check*/
+}
+.grid__items > * {
+  border: 1px solid black;
+}
+.grid__items .grid__items-description {
+  padding: 1rem;
+}
+.grid__items .grid__items-price {
+  margin-left: auto;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-end;
+}
+.grid__items .grid__items-box {
+  background: #99E2D0;
+}
+.grid__items h4, .grid p {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */
