@@ -318,6 +318,7 @@ header a:hover {
   }
 }
 
+/*rotation de l'icone intérieur*/
 .introduction__image img {
   display: block;
   width: 100%;
@@ -367,20 +368,20 @@ header a:hover {
 .grid {
   padding: 0 1rem;
   gap: 1rem;
-  background: yellow;
   display: grid;
   grid-template-columns: 1fr;
+  background: #f6f6f6;
 }
 .grid__menu {
-  border: 1px solid black;
-  background-color: white;
+  background: white;
+  box-shadow: 2px 1px 16px -3px #000;
+  border-radius: 1rem;
 }
 .grid__items {
   display: flex;
+  overflow: hidden; /*pour cacher le boutou vert*/
+  border-radius: 1rem;
   /*création du bouton check*/
-}
-.grid__items > * {
-  border: 1px solid black;
 }
 .grid__items .grid__items-description {
   padding: 1rem;
@@ -392,8 +393,49 @@ header a:hover {
   align-items: flex-end;
 }
 .grid__items .grid__items-box {
+  border-radius: 0 1rem 1rem 0;
   background: #99E2D0;
+  display: grid;
+  place-items: center;
+  margin-right: -4rem;
+  width: 4rem;
+  transition: margin-right 0.5s;
+}
+.grid__items .grid__items-box i {
+  background: white;
+  border-radius: 50%;
+  height: 1.5rem;
+  width: 1.5rem;
+  display: grid;
+  place-items: center;
+  color: #99E2D0;
+}
+.grid:hover .grid__items-box { /*création du hover bouton vert*/
+  margin-right: 0;
+}
+.grid:hover i {
+  /*rotation de l'icone intérieur*/
+  -webkit-animation: rotation 0.5s ease-in-out;
+          animation: rotation 0.5s ease-in-out;
+}
+@-webkit-keyframes rotation {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(-270deg);
+  }
+  100% {
+    transform: rotate(0);
+  }
 }
 .grid__items h4, .grid p {
   margin: 0;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*rotation de l'icone intérieur*//*# sourceMappingURL=style.css.map */

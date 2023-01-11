@@ -1,0 +1,12 @@
+/*rotation de l'icone intérieur*/
+
+@mixin rotation{
+    @keyframes rotation{
+        0%{
+            transform: rotate(-270deg);
+        }
+        100%{
+            transform: rotate(0);
+        }
+    }
+}

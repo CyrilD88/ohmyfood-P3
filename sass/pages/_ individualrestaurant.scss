@@ -1,4 +1,6 @@
 @import "../utils/colors";
+@import "../utils/mixins";
+@import "../utils/animations";
 
 .introduction__image img{
     display: block;
@@ -54,19 +56,19 @@
 .grid{
     padding: 0 1rem;
     gap: 1rem;
-    background: yellow;
     display: grid;
     grid-template-columns: 1fr;
+    background: $Background;
+  
     &__menu{
-        border: 1px solid black;
-        background-color:white;
-       
+        background: white;
+        @include shadow;
+        border-radius: 1rem;
     }
     &__items{
         display: flex;
-        & > *{
-            border: 1px solid black;
-        }
+        overflow: hidden; /*pour cacher le boutou vert*/
+        border-radius: 1rem;
         .grid__items-description{
             padding: 1rem;  
         }
@@ -78,8 +80,33 @@
         }
         /*création du bouton check*/
         .grid__items-box{
+            border-radius: 0 1rem 1rem 0;
             background: $Tertiaire;
+            display: grid;
+            place-items: center;
+            margin-right: -4rem;
+            width: 4rem;
+            transition: margin-right 0.5s;
+            i {
+                background: white;
+                border-radius: 50%;
+                height: 1.5rem;
+                width: 1.5rem;
+                display: grid;
+                place-items: center;
+                color: $Tertiaire;
+            }
         }
+    }
+    &:hover{ 
+    .grid__items-box{ /*création du hover bouton vert*/
+        margin-right: 0;
+    }
+    
+    i{
+        @include rotation; /*rotation de l'icone intérieur*/
+        animation: rotation 0.5s ease-in-out;
+    }
     }
     &__items h4,p{
         margin: 0;
