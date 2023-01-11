@@ -376,21 +376,32 @@ header a:hover {
   background: white;
   box-shadow: 2px 1px 16px -3px #000;
   border-radius: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .grid__items {
   display: flex;
   overflow: hidden; /*pour cacher le boutou vert*/
   border-radius: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
   /*création du bouton check*/
 }
 .grid__items .grid__items-description {
   padding: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .grid__items .grid__items-price {
   margin-left: auto;
   padding: 1rem;
   display: flex;
   align-items: flex-end;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .grid__items .grid__items-box {
   border-radius: 0 1rem 1rem 0;
@@ -436,6 +447,9 @@ header a:hover {
 }
 .grid__items h4, .grid p {
   margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /*rotation de l'icone intérieur*//*# sourceMappingURL=style.css.map */
