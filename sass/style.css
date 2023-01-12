@@ -319,6 +319,16 @@ header a:hover {
 }
 
 /*rotation de l'icone intérieur*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.header i {
+  font-weight: 900;
+}
+
 .introduction__image img {
   display: block;
   width: 100%;
