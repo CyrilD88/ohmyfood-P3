@@ -1,7 +1,7 @@
 @import "../utils/colors";
 @import "../utils/mixins";
 @import "../utils/animations";
-@import "../layout/footer";
+
 
 .introduction__image img{
     display: block;
@@ -156,3 +156,7 @@
         @include button;
     }
 } 
+
+.footer{
+    @include footer;
+}
