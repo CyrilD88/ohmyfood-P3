@@ -1,6 +1,7 @@
 @import "../utils/colors";
 @import "../utils/mixins";
 @import "../utils/animations";
+@import "../layout/footer";
 
 .introduction__image img{
     display: block;
@@ -59,14 +60,28 @@
     display: grid;
     grid-template-columns: 1fr;
     background: $Background;
-  
+    h3{
+        text-transform : uppercase;
+        font-weight: 400;
+        position: relative;
+        &::after{
+            content: "";
+            height: .25rem;
+            width: 3rem;
+            background-color: $Tertiaire;
+            position: absolute;
+            left: 0rem;
+            top: 1.5rem;
+        }
+    }
     &__menu{
         background: white;
-        @include shadow;
+        @include lightershadow;
         border-radius: 1rem;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
+        
     }
     &__items{
         display: flex;
@@ -74,15 +89,23 @@
         border-radius: 1rem;
          white-space: nowrap;
          text-overflow: ellipsis;
+        
         .grid__items-description{
-            padding: 1rem; 
+            padding: 0 1rem; 
             overflow: hidden;
             white-space: nowrap;
             text-overflow: ellipsis; 
+            h4,p{
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            }
+         
         }
         .grid__items-price{
             margin-left: auto;
             padding: 1rem;
+            font-weight: 900;
             display: flex;
             align-items: flex-end;
             overflow: hidden;
@@ -107,23 +130,29 @@
                 place-items: center;
                 color: $Tertiaire;
             }
-        }
-    }
-    &:hover{ 
-    .grid__items-box{ /*création du hover bouton vert*/
-        margin-right: 0;
-    }
-    
-    i{
-        @include rotation; /*rotation de l'icone intérieur*/
-        animation: rotation 0.5s ease-in-out;
-    }
-    }
-    &__items h4,p{
-        margin: 0;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
+        }  
+        &:hover{ 
+            cursor: pointer;
+            .grid__items-box{ /*création du hover bouton vert*/
+                margin-right: 0;
+            }
+            
+            i{
+                @include rotation; /*rotation de l'icone intérieur*/
+                animation: rotation 0.5s ease-in-out;
+            }
+            }
         
+   
+    
     }
 }
+.order__button{
+    height: 20vh;
+    display: grid;
+    place-items: center;
+    background-color: $Background;
+    button{
+        @include button;
+    }
+} 
