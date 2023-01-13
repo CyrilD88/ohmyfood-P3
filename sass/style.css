@@ -363,7 +363,6 @@ header a:hover {
   margin-top: -3rem;
   z-index: 1;
   position: relative;
-  border-radius: 2rem 2rem 0 0;
 }
 .restaurant__main h2 {
   font-family: "Shrikhand", cursive;
@@ -375,6 +374,7 @@ header a:hover {
 .banner {
   background: #f6f6f6;
   position: relative;
+  border-radius: 2rem 2rem 0 0;
 }
 .banner i {
   font-size: 1.5rem;
