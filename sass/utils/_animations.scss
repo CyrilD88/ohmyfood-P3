@@ -10,3 +10,15 @@
         }
     }
 }
+
+/*apparition des plats sur la page restaurant*/
+@keyframes appearance{
+    0%{
+        transform: translateY(70%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}

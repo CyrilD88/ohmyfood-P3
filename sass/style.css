@@ -319,6 +319,27 @@ header a:hover {
 }
 
 /*rotation de l'icone intérieur*/
+/*apparition des plats sur la page restaurant*/
+@-webkit-keyframes appearance {
+  0% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes appearance {
+  0% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 .header {
   display: flex;
   justify-content: center;
@@ -327,6 +348,7 @@ header a:hover {
 }
 .header i {
   font-weight: 900;
+  font-size: 2rem;
 }
 
 .introduction__image img {
@@ -396,6 +418,10 @@ header a:hover {
   left: 0rem;
   top: 1.5rem;
 }
+.grid .grid__menu-categorie {
+  display: grid;
+  gap: 10px;
+}
 .grid__menu {
   background: white;
   box-shadow: 2px 1px 8px -3px #7e7e7e;
@@ -403,6 +429,22 @@ header a:hover {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+  -webkit-animation: appearance 3s;
+          animation: appearance 3s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.grid__menu:nth-child(2) {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
+}
+.grid__menu:nth-child(3) {
+  -webkit-animation-delay: 300ms;
+          animation-delay: 300ms;
+}
+.grid__menu:nth-child(4) {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
 }
 .grid__items {
   display: flex;
@@ -526,4 +568,15 @@ header a:hover {
   height: 10px;
 }
 
-/*rotation de l'icone intérieur*//*# sourceMappingURL=style.css.map */
+/*rotation de l'icone intérieur*/
+/*apparition des plats sur la page restaurant*/
+@keyframes appearance {
+  0% {
+    transform: translateY(70%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}/*# sourceMappingURL=style.css.map */
