@@ -1,4 +1,6 @@
 @import "../utils/mixins";
+
+
 .menus{
     background-color: #f6f6f6;
     padding: 2rem 1rem;
@@ -77,4 +79,7 @@
     } 
 
 }
+
+@include restaurant__lign;
+
 

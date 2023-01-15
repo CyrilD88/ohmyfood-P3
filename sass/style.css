@@ -123,6 +123,19 @@ header a:hover {
   color: #9356DC;
 }
 
+/*mixin pour médiaqueries boutons accueil*/
+@media screen and (min-width: 767px) {
+  .function__list {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin: 0;
+  }
+  .function__list .button {
+    width: 20rem;
+  }
+}
 .menus {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
@@ -200,6 +213,15 @@ header a:hover {
   opacity: 1;
 }
 
+/*mixin pour médiaqueries cartes restaurant accueil*/
+@media screen and (min-width: 767px) {
+  .menus {
+    width: auto;
+  }
+  .menus .menus__cards {
+    flex-wrap: nowrap;
+  }
+}
 .footer {
   background: #2c2c2c;
   color: white;
@@ -224,6 +246,18 @@ header a:hover {
   height: 10px;
 }
 
+/*mixin pour médiaqueries footer*/
+@media screen and (min-width: 767px) {
+  .footer__title {
+    text-align: center;
+    font-size: 25px;
+    padding-bottom: 1rem;
+  }
+  .footer__list {
+    display: flex;
+    justify-content: space-around;
+  }
+}
 /*Création logo chargement*/
 .loading__spinner {
   position: fixed;
@@ -498,6 +532,8 @@ header a:hover {
 }
 .grid__items:hover .grid__items-box { /*création du hover bouton vert*/
   margin-right: 0;
+  -webkit-animation: slide-left 0.5s ease;
+          animation: slide-left 0.5s ease;
 }
 .grid__items:hover i {
   /*rotation de l'icone intérieur*/

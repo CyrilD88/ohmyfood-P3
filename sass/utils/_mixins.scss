@@ -46,3 +46,44 @@
         }
     }
 }
+@mixin footer__lign{ /*mixin pour médiaqueries footer*/
+@media screen and (min-width:767px){
+    .footer__title{
+        text-align: center;
+        font-size: 25px;
+        padding-bottom: 1rem
+    }
+    .footer__list{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+}
+
+
+@mixin restaurant__lign{ /*mixin pour médiaqueries cartes restaurant accueil*/
+@media screen and (min-width:767px) {
+    .menus{
+        width: auto;
+    .menus__cards{
+        flex-wrap: nowrap;
+    }
+    }
+}
+}
+
+@mixin function__lign{ /*mixin pour médiaqueries boutons accueil*/
+@media screen and (min-width:767px){
+        .function__list{
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            margin: 0;
+            .button{
+                width: 20rem;
+               
+            }
+        }
+    }
+    }

@@ -153,6 +153,7 @@
             cursor: pointer;
             .grid__items-box{ /*création du hover bouton vert*/
                 margin-right: 0;
+                animation: slide-left 0.5s ease;
             }
             
             i{
