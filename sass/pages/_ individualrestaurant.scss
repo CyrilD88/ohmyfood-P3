@@ -87,6 +87,7 @@
         display:grid;
         gap: 10px;
     }
+   
     &__menu{
         background: white;
         @include lightershadow;
@@ -180,3 +181,6 @@
 .footer{
     @include footer;
 }
+
+@include grid__button;
+@include grid__button__two;
