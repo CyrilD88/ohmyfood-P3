@@ -56,6 +56,7 @@
     }
     &:hover .fa-solid{
         opacity: 1;
+        transition: 0.5s;
     }
     &:current .fa-solid{
         opacity: 1;

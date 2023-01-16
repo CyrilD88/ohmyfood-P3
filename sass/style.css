@@ -208,6 +208,7 @@ header a:hover {
 }
 .menus .card__infos:hover .fa-solid {
   opacity: 1;
+  transition: 0.5s;
 }
 .menus .card__infos:current .fa-solid {
   opacity: 1;
@@ -261,7 +262,7 @@ header a:hover {
 /*Création logo chargement*/
 .loading__spinner {
   position: fixed;
-  background-color: #fff;
+  background-image: linear-gradient(#ff79da, #9356dc);
   height: 100vh;
   inset: 0px; /*pour ne pas que la page descente avec le scroll mettre position:fixed et rajouter inset*/
   z-index: 1; /*pour le faire passer devant ma page*/
@@ -426,6 +427,7 @@ header a:hover {
 }
 .banner:hover .fa-solid {
   opacity: 1;
+  transition: 0.5s;
 }
 .banner:current .fa-solid {
   opacity: 1;

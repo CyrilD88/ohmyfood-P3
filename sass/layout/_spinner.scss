@@ -1,7 +1,7 @@
 /*Création logo chargement*/
 .loading__spinner{
     position: fixed;
-    background-color: #fff;
+    background-image: linear-gradient(#ff79da, #9356dc);
     height: 100vh;
     inset: 0px; /*pour ne pas que la page descente avec le scroll mettre position:fixed et rajouter inset*/
     z-index: 1; /*pour le faire passer devant ma page*/
