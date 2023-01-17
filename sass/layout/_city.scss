@@ -1,6 +1,8 @@
+@import "../utils/colors";
+
 /*création de la localisation*/
 .location{
-    background-color: #f3f3f3;
+    background-color: $Grey;
     display: flex;  
     justify-content: center;  
     align-items: center;

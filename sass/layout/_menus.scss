@@ -1,8 +1,9 @@
 @import "../utils/mixins";
+@import "../utils/colors";
 
 
 .menus{
-    background-color: #f6f6f6;
+    background-color:$Background;
     padding: 2rem 1rem;
     width: auto;
 &__cards{
@@ -43,7 +44,7 @@
         border-radius: 3px;
         padding: 15px;
         color: #0c6b50;
-        background: #99E2D0;
+        background: $Tertiaire;
     }
 .card__infos{
         display: flex;
@@ -68,7 +69,7 @@
         
         .fa-solid {
             color:transparent;
-            background-image: linear-gradient(#ff79da, #9356dc);
+            background-image: linear-gradient($Secondary, $Primary);
             background-clip: text;
             -webkit-background-clip:text;
             opacity: 0;

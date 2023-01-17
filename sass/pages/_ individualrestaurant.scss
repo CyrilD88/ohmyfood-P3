@@ -3,12 +3,12 @@
 @import "../utils/animations";
 
 .header__restaurant{
-    font-family: 'Shrikhand', cursive;
+    @include font;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    background: #f6f6f6;
+    background: $Background;
     padding: 0;
     i {
         font-weight: 900;
@@ -34,7 +34,7 @@
     position: relative;
    
     h2{
-    font-family: 'Shrikhand', cursive;
+    @include font;
     padding: 2rem 1rem;
     margin: 0;
     border-radius: 1rem 1rem 0 0;
@@ -43,7 +43,7 @@
 }
 
 .banner{
-    background: #f6f6f6;
+    background: $Background;
     position: relative;
     border-radius: 2rem 2rem 0 0;
   
@@ -56,7 +56,7 @@
     }
     .fa-solid {
         color:transparent;
-        background-image: linear-gradient(#ff79da, #9356dc);
+        background-image: linear-gradient($Secondary, $Primary);
         background-clip: text;
         -webkit-background-clip:text;
         opacity: 0;
@@ -104,7 +104,7 @@
         text-overflow: ellipsis;
         animation: appearance 3s;
         animation-fill-mode: both;
-        @for $i from 2 through 4{
+        @for $i from 2 through 4{ /*animation pour le scroll du menu*/
             &:nth-child(#{$i}) {
                 animation-delay:100ms * $i;
             }

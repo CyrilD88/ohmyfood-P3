@@ -95,8 +95,8 @@ body {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  background-color: #9356DC;
-  border: 1px solid #9356DC;
+  background-color: #9356dc;
+  border: 1px solid #9356dc;
   border-radius: 22px;
   color: #FFF;
   display: flex;
@@ -121,7 +121,7 @@ body {
 }
 
 .button:hover i {
-  color: #9356DC;
+  color: #9356dc;
 }
 
 /*mixin pour médiaqueries boutons accueil*/
@@ -218,7 +218,7 @@ body {
 }
 .menus .card__infos .fa-solid {
   color: transparent;
-  background-image: linear-gradient(#ff79da, #9356dc);
+  background-image: linear-gradient(#FF79DA, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -229,7 +229,9 @@ body {
 }
 .menus .card__infos .fa-solid:current {
   opacity: 1;
-} /*mixin pour médiaqueries cartes restaurant accueil*/
+}
+
+/*mixin pour médiaqueries cartes restaurant accueil*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menus {
     width: auto;
@@ -303,7 +305,7 @@ body {
 /*Création logo chargement*/
 .loading__spinner {
   position: fixed;
-  background-image: linear-gradient(#ff79da, #9356dc);
+  background-image: linear-gradient(#FF79DA, #9356dc);
   height: 100vh;
   inset: 0px; /*pour ne pas que la page descente avec le scroll mettre position:fixed et rajouter inset*/
   z-index: 1; /*pour le faire passer devant ma page*/
@@ -321,7 +323,7 @@ body {
   border: 10px solid transparent;
   height: 10rem;
   width: 10rem;
-  border-top: 10px solid #9356DC;
+  border-top: 10px solid #9356dc;
   border-bottom: 10px solid #FF79DA;
   border-radius: 50%;
   -webkit-animation: chargeur 3s linear infinite;
@@ -346,50 +348,50 @@ body {
 @-webkit-keyframes chargeur {
   0% {
     transform: rotate(0deg) scale(1);
-    border-top-color: #9356DC;
+    border-top-color: #9356dc;
     border-bottom-color: #FF79DA;
   }
   25% {
     border-top-color: #FF79DA;
-    border-bottom-color: #9356DC;
+    border-bottom-color: #9356dc;
   }
   50% {
     transform: rotate(360deg) scale(1.5);
-    border-top-color: #9356DC;
+    border-top-color: #9356dc;
     border-bottom-color: #FF79DA;
   }
   75% {
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
+    border-top-color: #9356dc;
+    border-bottom-color: #9356dc;
   }
   100% {
     transform: rotate(720deg) scale(1);
-    border-top-color: #9356DC;
+    border-top-color: #9356dc;
     border-bottom-color: #FF79DA;
   }
 }
 @keyframes chargeur {
   0% {
     transform: rotate(0deg) scale(1);
-    border-top-color: #9356DC;
+    border-top-color: #9356dc;
     border-bottom-color: #FF79DA;
   }
   25% {
     border-top-color: #FF79DA;
-    border-bottom-color: #9356DC;
+    border-bottom-color: #9356dc;
   }
   50% {
     transform: rotate(360deg) scale(1.5);
-    border-top-color: #9356DC;
+    border-top-color: #9356dc;
     border-bottom-color: #FF79DA;
   }
   75% {
-    border-top-color: #9356DC;
-    border-bottom-color: #9356DC;
+    border-top-color: #9356dc;
+    border-bottom-color: #9356dc;
   }
   100% {
     transform: rotate(720deg) scale(1);
-    border-top-color: #9356DC;
+    border-top-color: #9356dc;
     border-bottom-color: #FF79DA;
   }
 }
@@ -468,7 +470,7 @@ body {
 }
 .banner .fa-solid {
   color: transparent;
-  background-image: linear-gradient(#ff79da, #9356dc);
+  background-image: linear-gradient(#FF79DA, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
@@ -517,6 +519,9 @@ body {
           animation: appearance 3s;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
+  /*animation pour le scroll du menu*/
+  /*animation pour le scroll du menu*/
+  /*animation pour le scroll du menu*/
 }
 .grid__menu:nth-child(2) {
   -webkit-animation-delay: 200ms;

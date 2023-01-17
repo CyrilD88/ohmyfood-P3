@@ -6,6 +6,10 @@
     box-shadow: 2px 1px 8px -3px #7e7e7e;
 }
 
+@mixin font{
+font-family: 'Shrikhand', cursive;
+}
+
 @mixin button{
     color: white;
         font-weight: 400;

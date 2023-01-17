@@ -1,7 +1,9 @@
+@import "../utils/colors";
+
 /*Création logo chargement*/
 .loading__spinner{
     position: fixed;
-    background-image: linear-gradient(#ff79da, #9356dc);
+    background-image: linear-gradient($Secondary, $Primary);
     height: 100vh;
     inset: 0px; /*pour ne pas que la page descente avec le scroll mettre position:fixed et rajouter inset*/
     z-index: 1; /*pour le faire passer devant ma page*/
@@ -11,25 +13,21 @@
     align-items:center;
     animation: disappear 3s ease-in-out;
     animation-fill-mode: forwards;
-    
-
-    &__box {
-    background-color: #000;
-    border: 10px solid transparent;
-    height: 10rem;
-    width: 10rem;
-    border-top: 10px solid #9356DC;
-    border-bottom: 10px solid #FF79DA;
-    border-radius:50%;
-    animation: chargeur 3s linear infinite;
-    
-  
+      &__box {
+       background-color: #000;
+       border: 10px solid transparent;
+       height: 10rem;
+       width: 10rem;
+       border-top: 10px solid $Primary;
+       border-bottom: 10px solid $Secondary;
+       border-radius:50%;
+       animation: chargeur 3s linear infinite;
     }
-    &__text{
-    color:#99E2D0;
-    font-size: 1.2rem;
-    font-weight:bold;
-    position:fixed; 
+      &__text{
+       color:$Tertiaire;
+       font-size: 1.2rem;
+       font-weight:bold;
+       position:fixed; 
     }
 @keyframes disappear{
     to{
@@ -39,26 +37,26 @@
 @keyframes chargeur{
   0%{
     transform: rotate(0deg) scale(1);
-    border-top-color:#9356DC;
-    border-bottom-color:#FF79DA;
+    border-top-color: $Primary;
+    border-bottom-color:$Secondary;
   }
    25%{
-     border-top-color:#FF79DA;
-     border-bottom-color:#9356DC;
+     border-top-color:$Secondary;
+     border-bottom-color:$Primary;
   }
    50%{
      transform: rotate(360deg) scale(1.50);
-     border-top-color:#9356DC;
-     border-bottom-color:#FF79DA;
+     border-top-color:$Primary;
+     border-bottom-color:$Secondary;
   }
   75%{
-    border-top-color: #9356DC;
-    border-bottom-color:#9356DC;    
+    border-top-color: $Primary;
+    border-bottom-color:$Primary;    
   }
   100%{
      transform: rotate(720deg) scale(1);
-     border-top-color:#9356DC;
-     border-bottom-color:#FF79DA;
+     border-top-color:$Primary;
+     border-bottom-color:$Secondary;
   }
 }
 
