@@ -15,11 +15,12 @@
         border-radius: 20px;
         background-image: linear-gradient(#ff79da, #9356dc);
         transition: transform 200ms;
-        @include shadow;
+       box-shadow: 2px 1px 16px -3px #000;
         &:hover{
             transform: scale(1.05);
             cursor: pointer;
-            opacity: 0.7;
+            opacity: 0.8;
+            box-shadow: 2px 1px 35px -3px #000;
         }
 }
 

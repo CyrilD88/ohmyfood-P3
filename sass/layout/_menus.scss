@@ -11,7 +11,6 @@
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
-   
     }
 &__card{
         background-color: #fff;
@@ -34,8 +33,6 @@
             transform: scale(1.02);
             box-shadow: 0px 0px 10px 2px rgba(147, 86, 220, 0.6);
         }
-      
-            
     }
 .card__text{
         position: absolute;
@@ -83,12 +80,7 @@
                 opacity: 1;
             }
         }
-     
-        
-       
     } 
-   
-
 }
 
 @include restaurant__lign;

@@ -11,18 +11,18 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-header {
+.header__index {
   font-family: "Shrikhand", cursive;
   text-align: center;
   box-shadow: 0px 3px 4px 1px grey;
   padding: 0.2rem;
   position: relative;
 }
-header a {
+.header__index a {
   text-decoration: none;
   color: black;
 }
-header a:hover {
+.header__index a:hover {
   cursor: pointer;
 }
 
@@ -39,7 +39,7 @@ header a:hover {
 .location__container {
   text-align: center;
   background-color: #fafafa;
-  padding: 3rem 0;
+  padding: 1rem 0 2rem 0;
 }
 .location__container h2 {
   margin-top: 2rem;
@@ -58,12 +58,13 @@ header a:hover {
 .location__container button:hover {
   transform: scale(1.05);
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.8;
+  box-shadow: 2px 1px 35px -3px #000;
 }
 
 .function {
   width: auto;
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 }
 
 .function__list {
@@ -228,9 +229,7 @@ header a:hover {
 }
 .menus .card__infos .fa-solid:current {
   opacity: 1;
-}
-
-/*mixin pour médiaqueries cartes restaurant accueil*/
+} /*mixin pour médiaqueries cartes restaurant accueil*/
 @media screen and (min-width: 768px) and (max-width: 991px) {
   .menus {
     width: auto;
@@ -417,14 +416,21 @@ header a:hover {
     opacity: 1;
   }
 }
-.header {
+.header__restaurant {
+  font-family: "Shrikhand", cursive;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  background: #f6f6f6;
+  padding: 0;
 }
-.header i {
+.header__restaurant i {
   font-weight: 900;
+  font-size: 2rem;
+  color: #000;
+}
+.header__restaurant h1 {
   font-size: 2rem;
 }
 
@@ -621,7 +627,8 @@ header a:hover {
 .order__button button:hover {
   transform: scale(1.05);
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 0.8;
+  box-shadow: 2px 1px 35px -3px #000;
 }
 
 .footer {
