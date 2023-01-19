@@ -1,5 +1,5 @@
 @import "../utils/mixins";
-@import "../utils/mixins";
+
 
 /*création de la fonction réserver + bouton*/
  .location__container{
@@ -10,6 +10,6 @@
         margin-top: 2rem;     
     }
     button{
-        @include button;
+        @include button; /*création du bouton commander*/
         }
     }

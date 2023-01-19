@@ -45,6 +45,7 @@ body {
   margin-top: 2rem;
 }
 .location__container button {
+  /*création du bouton réserver pour la partie reservation*/
   color: white;
   font-weight: 400;
   font-size: 1.2rem;
@@ -54,6 +55,7 @@ body {
   background-image: linear-gradient(#ff79da, #9356dc);
   transition: transform 200ms;
   box-shadow: 2px 1px 16px -3px #000;
+  /*création du bouton commander*/
 }
 .location__container button:hover {
   transform: scale(1.05);
@@ -149,6 +151,7 @@ body {
     width: 20rem;
   }
 }
+/*création des cartes du menu*/
 .menus {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
@@ -162,11 +165,11 @@ body {
   flex-wrap: wrap;
 }
 .menus__card {
+  position: relative;
   background-color: #fff;
   width: 30rem;
   height: 305px;
   border-radius: 20px;
-  position: relative;
   box-shadow: 2px 1px 16px -3px #000;
 }
 .menus__card a {
@@ -222,12 +225,9 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
+  transition: 0.5s ease-in-out;
 }
 .menus .card__infos .fa-solid:hover {
-  opacity: 1;
-  transition: 0.5s;
-}
-.menus .card__infos .fa-solid:current {
   opacity: 1;
 }
 
@@ -307,16 +307,15 @@ body {
   position: fixed;
   background-image: linear-gradient(#FF79DA, #9356dc);
   height: 100vh;
-  inset: 0px; /*pour ne pas que la page descente avec le scroll mettre position:fixed et rajouter inset*/
+  inset: 0px; /*pour ne pas que la page descende avec le scroll mettre position:fixed et rajouter inset*/
   z-index: 1; /*pour le faire passer devant ma page*/
   opacity: 0.9; /*pour le rendre plus transparent*/
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-animation: disappear 3s ease-in-out;
-          animation: disappear 3s ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  -webkit-animation: disappear 3s forwards;
+          animation: disappear 3s forwards;
+  transform-origin: top; /* fin de l'animation*/
 }
 .loading__spinner__box {
   background-color: #000;
@@ -335,14 +334,16 @@ body {
   font-weight: bold;
   position: fixed;
 }
+
+/*keyframes pour le loading spinner*/
 @-webkit-keyframes disappear {
   to {
-    transform: scale(0);
+    transform: scale(0); /*pour réduire la page*/
   }
 }
 @keyframes disappear {
   to {
-    transform: scale(0);
+    transform: scale(0); /*pour réduire la page*/
   }
 }
 @-webkit-keyframes chargeur {
@@ -395,7 +396,6 @@ body {
     border-bottom-color: #FF79DA;
   }
 }
-
 /*rotation de l'icone intérieur*/
 /*apparition des plats sur la page restaurant*/
 @-webkit-keyframes appearance {
@@ -506,7 +506,7 @@ body {
 }
 .grid .grid__menu-categorie {
   display: grid;
-  gap: 10px;
+  gap: 1rem;
 }
 .grid__menu {
   background: white;
@@ -514,7 +514,6 @@ body {
   border-radius: 1rem;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
   -webkit-animation: appearance 3s;
           animation: appearance 3s;
   -webkit-animation-fill-mode: both;
@@ -539,20 +538,26 @@ body {
   display: flex;
   overflow: hidden; /*pour cacher le boutou vert*/
   border-radius: 1rem;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   /*création du bouton check*/
 }
 .grid__items .grid__items-description {
-  padding: 0 1rem;
+  padding: 1rem;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  width: 100%;
 }
-.grid__items .grid__items-description h4, .grid__items .grid__items-description p {
+.grid__items .grid__items-description h4 {
   overflow: hidden;
-  white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
+}
+.grid__items .grid__items-description p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;
 }
 .grid__items .grid__items-price {
   margin-left: auto;
@@ -560,9 +565,6 @@ body {
   font-weight: 900;
   display: flex;
   align-items: flex-end;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 .grid__items .grid__items-box {
   border-radius: 0 1rem 1rem 0;
@@ -591,7 +593,6 @@ body {
           animation: slide-left 0.5s ease;
 }
 .grid__items:hover i {
-  /*rotation de l'icone intérieur*/
   -webkit-animation: rotation 0.5s ease-in-out;
           animation: rotation 0.5s ease-in-out;
 }
@@ -619,6 +620,7 @@ body {
   background-color: #f6f6f6;
 }
 .order__button button {
+  /*création du bouton réserver pour la partie reservation*/
   color: white;
   font-weight: 400;
   font-size: 1.2rem;
@@ -691,7 +693,38 @@ body {
     grid-template-rows: 1fr;
   }
   .grid__menu {
-    width: 95%;
+    width: 100%;
+  }
+}
+/*keyframes pour le loading spinner*/
+@keyframes disappear {
+  to {
+    transform: scale(0); /*pour réduire la page*/
+  }
+}
+@keyframes chargeur {
+  0% {
+    transform: rotate(0deg) scale(1);
+    border-top-color: #9356dc;
+    border-bottom-color: #FF79DA;
+  }
+  25% {
+    border-top-color: #FF79DA;
+    border-bottom-color: #9356dc;
+  }
+  50% {
+    transform: rotate(360deg) scale(1.5);
+    border-top-color: #9356dc;
+    border-bottom-color: #FF79DA;
+  }
+  75% {
+    border-top-color: #9356dc;
+    border-bottom-color: #9356dc;
+  }
+  100% {
+    transform: rotate(720deg) scale(1);
+    border-top-color: #9356dc;
+    border-bottom-color: #FF79DA;
   }
 }
 /*rotation de l'icone intérieur*/

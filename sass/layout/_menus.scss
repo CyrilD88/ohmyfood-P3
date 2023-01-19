@@ -1,7 +1,7 @@
 @import "../utils/mixins";
 @import "../utils/colors";
 
-
+/*création des cartes du menu*/
 .menus{
     background-color:$Background;
     padding: 2rem 1rem;
@@ -14,11 +14,11 @@
     flex-wrap: wrap;
     }
 &__card{
+        position: relative;
         background-color: #fff;
         width: 30rem;
         height: 305px;
         border-radius: 20px;
-        position: relative;
         @include shadow;
         & a{
             text-decoration: none;
@@ -73,11 +73,8 @@
             background-clip: text;
             -webkit-background-clip:text;
             opacity: 0;
+            transition: 0.5s ease-in-out;
             &:hover {
-                opacity: 1;
-                transition: 0.5s;
-            }
-            &:current {
                 opacity: 1;
             }
         }

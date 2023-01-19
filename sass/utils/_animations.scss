@@ -1,5 +1,36 @@
-/*rotation de l'icone intérieur*/
+/*keyframes pour le loading spinner*/
+@keyframes disappear{
+    to{
+        transform: scale(0); /*pour réduire la page*/
+    }
+  }
+  @keyframes chargeur{
+  0%{
+    transform: rotate(0deg) scale(1);
+    border-top-color: $Primary;
+    border-bottom-color:$Secondary;
+  }
+   25%{
+     border-top-color:$Secondary;
+     border-bottom-color:$Primary;
+  }
+   50%{
+     transform: rotate(360deg) scale(1.50);
+     border-top-color:$Primary;
+     border-bottom-color:$Secondary;
+  }
+  75%{
+    border-top-color: $Primary;
+    border-bottom-color:$Primary;    
+  }
+  100%{
+     transform: rotate(720deg) scale(1);
+     border-top-color:$Primary;
+     border-bottom-color:$Secondary;
+  }
+  }
 
+/*rotation de l'icone intérieur*/
 @mixin rotation{
     @keyframes rotation{
         0%{
@@ -22,3 +53,5 @@
         opacity: 1;
     }
 }
+
+

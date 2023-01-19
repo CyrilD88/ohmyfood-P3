@@ -10,7 +10,7 @@
 font-family: 'Shrikhand', cursive;
 }
 
-@mixin button{
+@mixin button{ /*création du bouton réserver pour la partie reservation*/
     color: white;
         font-weight: 400;
         font-size: 1.2rem;
@@ -184,7 +184,7 @@ font-family: 'Shrikhand', cursive;
        
         }
         .grid__menu{
-            width: 95%;
+            width: 100%;
             
         }
     }

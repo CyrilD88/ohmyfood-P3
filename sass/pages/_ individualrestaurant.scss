@@ -1,6 +1,6 @@
+@import "../utils/animations";
 @import "../utils/colors";
 @import "../utils/mixins";
-@import "../utils/animations";
 
 .header__restaurant{
     @include font;
@@ -24,8 +24,6 @@
     width: 100%;
     height: 60vh;
     object-fit: cover;
-  
-
 }
 
 .restaurant__main{ 
@@ -38,7 +36,6 @@
     padding: 2rem 1rem;
     margin: 0;
     border-radius: 1rem 1rem 0 0;
-    
 }
 }
 
@@ -92,7 +89,7 @@
     }
     .grid__menu-categorie{
         display:grid;
-        gap: 10px;
+        gap: 1rem;
     }
    
     &__menu{
@@ -101,7 +98,6 @@
         border-radius: 1rem;
         overflow: hidden;
         white-space: nowrap;
-        text-overflow: ellipsis;
         animation: appearance 3s;
         animation-fill-mode: both;
         @for $i from 2 through 4{ /*animation pour le scroll du menu*/
@@ -114,18 +110,25 @@
         display: flex;
         overflow: hidden; /*pour cacher le boutou vert*/
         border-radius: 1rem;
-         white-space: nowrap;
-         text-overflow: ellipsis;
+       
          
         .grid__items-description{
-            padding: 0 1rem; 
+            padding:  1rem; 
             overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis; 
-            h4,p{
+            width: 100%;
+            h4{
             overflow: hidden;
-            white-space: nowrap;
             text-overflow: ellipsis;
+            white-space: nowrap;
+            margin: 0;
+            padding: 0;
+            }
+            p{
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                margin: 0;
+                padding: 0;
             }
          
         }
@@ -135,9 +138,6 @@
             font-weight: 900;
             display: flex;
             align-items: flex-end;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
         }
         /*création du bouton check*/
         .grid__items-box{
@@ -166,11 +166,10 @@
             }
             
             i{
-                @include rotation; /*rotation de l'icone intérieur*/
+                @include rotation; 
                 animation: rotation 0.5s ease-in-out;
             }
             }
-        
    
     
     }
