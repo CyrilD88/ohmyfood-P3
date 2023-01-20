@@ -55,3 +55,9 @@
 }
 
 
+/*animation du coeur*/
+@keyframes efface{
+    90%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
