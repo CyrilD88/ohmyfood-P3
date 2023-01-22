@@ -156,6 +156,7 @@ body {
   background-color: #f6f6f6;
   padding: 2rem 1rem;
   width: auto;
+  /*validation du coeur au clic*/
 }
 .menus__cards {
   display: flex;
@@ -225,10 +226,41 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   opacity: 0;
-  transition: 0.5s ease-in-out;
 }
-.menus .card__infos .fa-solid:hover {
-  opacity: 1;
+@-webkit-keyframes dislike {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes dislike {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.menus input {
+  display: none;
+}
+.menus input:checked + .firstheart .fa-solid {
+  -webkit-animation: dislike 3s ease-out 0.5s 1 normal forwards;
+          animation: dislike 3s ease-out 0.5s 1 normal forwards;
+}
+.menus input:checked + .secondheart .fa-solid {
+  -webkit-animation: dislike 3s ease-out 0.5s 1 normal forwards;
+          animation: dislike 3s ease-out 0.5s 1 normal forwards;
+}
+.menus input:checked + .thirdheart .fa-solid {
+  -webkit-animation: dislike 3s ease-out 0.5s 1 normal forwards;
+          animation: dislike 3s ease-out 0.5s 1 normal forwards;
+}
+.menus input:checked + .forthheart .fa-solid {
+  -webkit-animation: dislike 3s ease-out 0.5s 1 normal forwards;
+          animation: dislike 3s ease-out 0.5s 1 normal forwards;
 }
 
 /*mixin pour médiaqueries cartes restaurant accueil*/

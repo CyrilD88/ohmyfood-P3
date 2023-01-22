@@ -72,14 +72,36 @@
             background-clip: text;
             -webkit-background-clip:text;
             opacity: 0;
-            transition: 0.5s ease-in-out;
-            &:hover {
-                opacity: 1;
-            }
+        
+           
         }
     } 
-}
 
+@keyframes dislike{
+    from{
+      opacity:1
+    }
+    to{
+      opacity:1
+    }
+  }
+  input{
+    display: none;
+  }
+  /*validation du coeur au clic*/
+  input:checked + .firstheart .fa-solid{
+    animation: dislike 3s ease-out 0.5s 1 normal forwards ;
+  }
+  input:checked + .secondheart .fa-solid{
+    animation: dislike 3s ease-out 0.5s 1 normal forwards ;
+  }
+  input:checked + .thirdheart .fa-solid{
+    animation: dislike 3s ease-out 0.5s 1 normal forwards ;
+  }
+  input:checked + .forthheart .fa-solid{
+    animation: dislike 3s ease-out 0.5s 1 normal forwards ;
+  }
+}
 @include restaurant__lign;
 
 @include restaurant__lign__two;
