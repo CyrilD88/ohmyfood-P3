@@ -58,14 +58,34 @@
         -webkit-background-clip:text;
         opacity: 0;
     }
-    &:hover .fa-solid{
-        opacity: 1;
-        transition: 0.5s;
-    }
-    &:current .fa-solid{
-        opacity: 1;
-    }
+    @keyframes dislike{
+        from{
+          opacity:1
+        }
+        to{
+          opacity:1
+        }
+      }
+      input{
+        display: none;
+      }
+      /*validation du coeur au clic*/
+      input:checked + .heart_page_one .fa-solid{
+        animation: dislike 3s ease-out 0.5s 1 normal forwards ;
+      }
+      input:checked + .heart_page_two .fa-solid{
+        animation: dislike 3s ease-out 0.5s 1 normal forwards ;
+      }
+      input:checked + .heart_page_three .fa-solid{
+        animation: dislike 3s ease-out 0.5s 1 normal forwards ;
+      }
+      input:checked + .heart_page_for .fa-solid{
+        animation: dislike 3s ease-out 0.5s 1 normal forwards ;
+      }
+  
 }
+
+
 
 .grid{
     padding: 0 1rem;

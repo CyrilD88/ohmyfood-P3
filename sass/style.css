@@ -509,6 +509,7 @@ body {
   background: #f6f6f6;
   position: relative;
   border-radius: 2rem 2rem 0 0;
+  /*validation du coeur au clic*/
 }
 .banner i {
   font-size: 1.5rem;
@@ -524,12 +525,32 @@ body {
   -webkit-background-clip: text;
   opacity: 0;
 }
-.banner:hover .fa-solid {
-  opacity: 1;
-  transition: 0.5s;
+@keyframes dislike {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
 }
-.banner:current .fa-solid {
-  opacity: 1;
+.banner input {
+  display: none;
+}
+.banner input:checked + .heart_page_one .fa-solid {
+  -webkit-animation: dislike 3s ease-out 0.5s 1 normal forwards;
+          animation: dislike 3s ease-out 0.5s 1 normal forwards;
+}
+.banner input:checked + .heart_page_two .fa-solid {
+  -webkit-animation: dislike 3s ease-out 0.5s 1 normal forwards;
+          animation: dislike 3s ease-out 0.5s 1 normal forwards;
+}
+.banner input:checked + .heart_page_three .fa-solid {
+  -webkit-animation: dislike 3s ease-out 0.5s 1 normal forwards;
+          animation: dislike 3s ease-out 0.5s 1 normal forwards;
+}
+.banner input:checked + .heart_page_for .fa-solid {
+  -webkit-animation: dislike 3s ease-out 0.5s 1 normal forwards;
+          animation: dislike 3s ease-out 0.5s 1 normal forwards;
 }
 
 .grid {
