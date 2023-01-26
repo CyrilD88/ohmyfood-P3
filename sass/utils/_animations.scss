@@ -4,7 +4,7 @@
         transform: scale(0); /*pour réduire la page*/
     }
   }
-  @keyframes chargeur{
+  @keyframes loader{
   0%{
     transform: rotate(0deg) scale(1);
     border-top-color: $Primary;
@@ -54,10 +54,4 @@
     }
 }
 
-
-/*animation du coeur*/
-@keyframes efface{
-    90%{opacity: 1;}
-    100%{opacity: 0;}
-}
 

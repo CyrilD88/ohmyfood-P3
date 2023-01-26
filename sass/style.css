@@ -9,6 +9,7 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: "Roboto", sans-serif;
+  min-width: 160px;
 }
 
 .header__index {
@@ -44,6 +45,9 @@ body {
 .location__container h2 {
   margin-top: 2rem;
 }
+.location__container p {
+  color: grey;
+}
 .location__container button {
   /*création du bouton réserver pour la partie reservation*/
   color: white;
@@ -77,6 +81,7 @@ body {
 }
 
 .button {
+  min-width: 160px;
   display: flex;
   align-items: center;
   width: 100%;
@@ -115,6 +120,10 @@ body {
   justify-content: center;
   align-items: center;
   margin-left: 2rem;
+  font-weight: 700;
+}
+.button .fas {
+  color: grey;
 }
 
 .button:hover {
@@ -229,18 +238,18 @@ body {
 }
 @-webkit-keyframes dislike {
   from {
-    opacity: 1;
+    opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: 2;
   }
 }
 @keyframes dislike {
   from {
-    opacity: 1;
+    opacity: 0;
   }
   to {
-    opacity: 1;
+    opacity: 2;
   }
 }
 .menus input {
@@ -334,39 +343,6 @@ body {
     justify-content: space-around;
   }
 }
-/*Création logo chargement*/
-.loading__spinner {
-  position: fixed;
-  background-image: linear-gradient(#FF79DA, #9356dc);
-  height: 100vh;
-  inset: 0px; /*pour ne pas que la page descende avec le scroll mettre position:fixed et rajouter inset*/
-  z-index: 1; /*pour le faire passer devant ma page*/
-  opacity: 0.9; /*pour le rendre plus transparent*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  -webkit-animation: disappear 3s forwards;
-          animation: disappear 3s forwards;
-  transform-origin: top; /* fin de l'animation*/
-}
-.loading__spinner__box {
-  background-color: #000;
-  border: 10px solid transparent;
-  height: 10rem;
-  width: 10rem;
-  border-top: 10px solid #9356dc;
-  border-bottom: 10px solid #FF79DA;
-  border-radius: 50%;
-  -webkit-animation: chargeur 3s linear infinite;
-          animation: chargeur 3s linear infinite;
-}
-.loading__spinner__text {
-  color: #99E2D0;
-  font-size: 1.2rem;
-  font-weight: bold;
-  position: fixed;
-}
-
 /*keyframes pour le loading spinner*/
 @-webkit-keyframes disappear {
   to {
@@ -378,7 +354,7 @@ body {
     transform: scale(0); /*pour réduire la page*/
   }
 }
-@-webkit-keyframes chargeur {
+@-webkit-keyframes loader {
   0% {
     transform: rotate(0deg) scale(1);
     border-top-color: #9356dc;
@@ -403,7 +379,7 @@ body {
     border-bottom-color: #FF79DA;
   }
 }
-@keyframes chargeur {
+@keyframes loader {
   0% {
     transform: rotate(0deg) scale(1);
     border-top-color: #9356dc;
@@ -448,23 +424,6 @@ body {
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-/*animation du coeur*/
-@-webkit-keyframes efface {
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-@keyframes efface {
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
   }
 }
 .header__restaurant {
@@ -772,7 +731,7 @@ body {
     transform: scale(0); /*pour réduire la page*/
   }
 }
-@keyframes chargeur {
+@keyframes loader {
   0% {
     transform: rotate(0deg) scale(1);
     border-top-color: #9356dc;
@@ -809,12 +768,35 @@ body {
     opacity: 1;
   }
 }
-/*animation du coeur*/
-@keyframes efface {
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+/*Création logo chargement*/
+.loading__spinner {
+  position: fixed;
+  background-image: linear-gradient(#FF79DA, #9356dc);
+  height: 100vh;
+  inset: 0px; /*pour ne pas que la page descende avec le scroll mettre position:fixed et rajouter inset*/
+  z-index: 1; /*pour le faire passer devant ma page*/
+  opacity: 0.9; /*pour le rendre plus transparent*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: disappear 3s forwards;
+          animation: disappear 3s forwards;
+  transform-origin: top; /* fin de l'animation*/
+}
+.loading__spinner__box {
+  background-color: #000;
+  border: 10px solid transparent;
+  height: 10rem;
+  width: 10rem;
+  border-top: 10px solid #9356dc;
+  border-bottom: 10px solid #FF79DA;
+  border-radius: 50%;
+  -webkit-animation: loader 3s linear infinite;
+          animation: loader 3s linear infinite;
+}
+.loading__spinner__text {
+  color: #99E2D0;
+  font-size: 1.2rem;
+  font-weight: bold;
+  position: fixed;
 }/*# sourceMappingURL=style.css.map */

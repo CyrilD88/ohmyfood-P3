@@ -9,6 +9,9 @@
     h2{
         margin-top: 2rem;     
     }
+    p{
+        color: grey;
+    }
     button{
         @include button; /*création du bouton commander*/
         }

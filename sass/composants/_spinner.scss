@@ -1,6 +1,3 @@
-
-
-
 /*Création logo chargement*/
 .loading__spinner{
     position: fixed;
@@ -22,12 +19,12 @@
        border-top: 10px solid $Primary;
        border-bottom: 10px solid $Secondary;
        border-radius:50%;
-       animation: chargeur 3s linear infinite;
+       animation: loader 3s linear infinite;
     }
       &__text{
        color:$Tertiaire;
        font-size: 1.2rem;
        font-weight:bold;
        position:fixed; 
-    }
+      }
 }
